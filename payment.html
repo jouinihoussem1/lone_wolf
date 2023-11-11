@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Clothing Store</title>
+    <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="shop.html">Shop</a>
+        </nav>
+    </header>
+
+    <section class="main-content">
+        <h2 style="text-align: center; color: #fff; font-family: Georgia, 'Times New Roman', Times, serif;">Complete Your Order</h2>
+        
+        <form action="process_order.php" method="post">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="number" id="phone" name="phone" required maxlength="12">
+            </fieldset>
+
+            <fieldset>
+                <legend>Billing Address</legend>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="zip">POST Code:</label>
+                <input type="number" id="zip" name="zip" required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="" disabled selected>Select your country</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Delivery Method</legend>
+                <label>
+                    <input type="radio" name="delivery" value="standard" checked>
+                    Standard Delivery ($5.00)
+                </label>
+                <label>
+                    <input type="radio" name="delivery" value="express">
+                    Express Delivery ($10.00)
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Payment Information</legend>
+                <label for="card">Credit Card Number:</label>
+                <input type="number" id="card" name="card" required maxlength="12">
+
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+
+                <label for="cvv">CVV:</label>
+                <input type="number" id="cvv" name="cvv" required maxlength="3">
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </fieldset>
+
+            <button type="submit"><a href="message.html" style="text-decoration: none;"> Order</a></button>
+            <button type="reset">reset</button>
+        </form>
+    </section>
+
+    <footer style="color: #fff;">
+        <p>&copy; 2023 Clothing Store</p>
+    </footer>
+</body>
+</html>
